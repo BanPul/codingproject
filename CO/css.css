@@ -1,0 +1,153 @@
+body {
+    color: white;
+    font-family: "Inter";
+}
+nav a {
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    padding-bottom: 3px;
+    padding-top: 20px;
+}
+header h3{
+    font-weight: bold;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFCD06;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    visibility: visible;
+    width: 100%;
+}
+
+nav a:hover {
+    color: #FFCD06;
+}
+
+.hero-section {
+    padding: 50px 20px;
+    text-align: left;
+    background: linear-gradient(to bottom,#0008FF,#140776);
+}
+.hero-section .text-content{
+    padding-bottom: 60px;
+    width: 700px;
+}
+.hero-section .text-content p, h1, h2, a{
+    font-weight: bold;
+}
+
+.hero-section h1 {
+    color: #ffc107; /* Warna kuning */
+}
+
+.hero-section h2 {
+    color: #ffcc00; /* Warna kuning untuk subjudul */
+    font-weight: bold;
+}
+
+.hero-section p {
+    color: white;
+    font-size: 18px;
+}
+
+.hero-buttons .btn {
+    margin: 10px 5px;
+    font-weight: 800;
+    border-radius: 50px;
+    padding: 10px 35px 10px 35px;
+    font-size: 18px;
+}
+
+.hero-image {
+    text-align: center;
+}
+
+/* about page */
+
+.about-title {
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #0b376d;
+}
+
+.about-image {
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.info-box img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.info-box h5 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0b376d;
+}
+
+.info-box p {
+    margin: 0;
+    color: #888;
+}
+
+.info-box:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.cta-section {
+    background-color: #0008ff;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.cta-section p {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-btn {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+    transform: rotate(-10deg);
+    position: relative;
+    z-index: 2;
+}
