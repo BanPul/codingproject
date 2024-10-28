@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn-more-page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- nav -->
+
+    <header class="container-fluid text-white py-3 animate" style="background-color: #0008FF;">
+        <div class="container d-flex justify-content-between">
+            <h3 class="mb-0">DPIB</h3>
+            <nav>
+                <a href="#" class=" me-3">Home</a>
+                <a href="#" class=" me-3">About</a>
+                <a href="#" class=" me-3">Contact Us</a>
+                <a href="#" class="">Case Studies</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- hero -->
+
+    <section class="hero-section container-fluid animate" style="border-radius: 0px;">
+        <div class="container d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between">
+            <div class="text-content">
+                <h2>Jurusan DPIB</h2>
+                <h1 style="color: #fff;">Penasaran Gak Sih? <br> <span style="color: #FFCD06;">Desain Pemodelan dan Informasi Bangunan</span></h1>
+                <p style="width: 450px;">Jurusan Desain Pemodelan dan Informasi Bangunan (DPIB) adalah salah satu program keahlian di bidang teknik yang mempersiapkan siswa menjadi tenaga profesional dalam perencanaan, pemodelan, dan pengelolaan informasi bangunan berbasis teknologi digital.</p>
+            </div>
+            <div class="hero-image">
+                <img src="../img/Rectangle 14.png" alt="Building Design Image" width="500px">
+            </div>
+        </div>
+    </section>
+
+    <!-- visi-misi -->
+
+    <section style="padding-top: 0px;" class="animate">
+        <div class="container-img" style="background: url(../img/download\ 1.png);background-size: cover;background-repeat: no-repeat;padding: -50px;">
+            <div class="row" style="padding: 50px;">
+                <div class="col">
+                    <div class="container-visi" style="width: 300px;padding: 50px;position: relative;left: 30px;backdrop-filter: blur;border-radius: 40px;background: linear-gradient(to bottom,#1400A7,#0008FF);">
+                        <p align="center" style="font-weight: bold;font-size: 28px;color: #FFCD06;">Visi</p>
+                        <p style="font-weight: 600;font-size: 18px;text-align: center;">Mewujudkan Siswa Kompeten Yang BERDASI(Berakhlak Mulia,Adaptif,Dan Berprestasi), Melalui LIMA (Lllah,Mandiri,Amanah) Pengelolaan Sekolah,Serta Memiliki Etika Lingkungan (Environment Ethic) Pada Periode 2024-2028</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="container" style="background-color: #1400A7;padding: 20px;display: flex;align-items: center;border-radius: 40px;right: 60px;position: relative;">
+                        <svg width="78" height="90" viewBox="0 0 118 156" fill="none" xmlns="http://www.w3.org/2000/svg" style="padding-left: 20px;">
+                            <path d="M2 14.6109L48.224 2.16666V50.3891L2 62.8333V14.6109ZM2 84.351L48.224 71.9068V120.129L2 132.573V84.351ZM69.556 66.9132L115.776 56.0917V143.012L69.56 153.833L69.556 66.9132Z" fill="#FFCD06" stroke="#FFCD06" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                        <h1 style="padding-left: 50px;color: #FFCD06;font-size: 60px;">We Are DPIB!</h1>
+                    </div>
+                    <div class="row" style="position: relative;right: 60px;">
+                        <div class="col" style="padding-top: 40px;">
+                            <div class="container" style="background: linear-gradient(to bottom,#1400A7,#0008FF);padding: 40px;border-radius: 40px;">
+                                <h1 style="color: #FFCD06;text-align: center;">Misi</h1>
+                                <p>1.Meningkatkan Kompetensi Siswa untuk Memenuhi Kebutuhan Dunia Kerja</p>
+                                <p>2.Meningkatkan Kompetensi Guru dalam Pembelajaran Abad 21</p>
+                                <p>3.Memiliki Sistem Manajemen yang Berorientasi Terhadap Mutu</p>
+                                <p>4.Melaksanakan Model Pembelajaran TEFA (Teaching Factory) Disesuaikan dengan Perkembangan Teknologi Industri</p>
+                                <p>5.Melaksanakan Seluruh Kegiatan yang Menerapkan Etika Lingkungan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="asset/js/animate.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.2 
+            };
+
+            const callback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+            const observer = new IntersectionObserver(callback, options);
+            const elements = document.querySelectorAll('.animate');
+            elements.forEach(element => observer.observe(element));
+        });
+    </script>
+</body>
+</html>
